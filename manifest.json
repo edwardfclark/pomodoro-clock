@@ -1,0 +1,10 @@
+{
+    "name":"the_party_bard's Pomodoro Clock",
+    "version": "0.1",
+    "description": "A Chrome extension that adds a Pomodoro Clock to the toolbar, for enhanced productivity!",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "pomodoro.html",
+        "default_icon": "tomato.png"
+    }
+}
