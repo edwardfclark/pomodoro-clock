@@ -1,8 +1,23 @@
 <html>
     <head>
-
+            
+            <script src="jquery-3.3.1.min.js"></script>
+            <link rel="stylesheet" href="styles.css">
+            <script src="timer-script.js"></script>
+            
     </head>
     <body>
-        <h1>Test!</h1>
+        <div id="container">
+            <div id="interval-state" data-state="session"><h2 id="state-text">Session</h2></div>
+            <div id="timer" data-status="pause"><h1><span id="minutes" data-minutes="25">25</span>:<span id="seconds" data-seconds="0">00</span></h1></div>
+            <div id="session-buttons">
+                <p>Session</p>
+                <p><span id="session-subtract">-</span> <span id="session-length" data-time="25">25</span> <span id="session-add">+</span></p>
+            </div>
+            <div id="break-buttons">
+                    <p>Break</p>
+                    <p><span id="break-subtract">-</span> <spa id="break-length" data-time="5">5</span> <span id="break-add">+</span></p>
+            </div>
+        </div>
     </body>
 </html>

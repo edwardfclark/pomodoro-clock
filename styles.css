@@ -1,0 +1,52 @@
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 60px 60px;
+    width: 200px;
+    height: auto;
+}
+
+#interval-state, #timer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+}
+
+#timer {
+    height: 80px;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+#break-buttons, #session-buttons {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#break-buttons p, #session-buttons p {
+    margin: 0;
+}
+
+.break {
+
+}
+
+.session {
+
+}
+
+.pause-text {
+
+}
+
+.hide {
+
+}
+
+.show {
+    
+}
