@@ -27,11 +27,12 @@ $(document).ready(function () {
         let secs = parseInt($("#seconds").attr("data-seconds"));
         let mins = parseInt($("#minutes").attr("data-minutes"));
 
+        
         //Subtract from secs unless secs is 0, update the values on the page inside both the tags and the data attributes.
         secs > 0 ? secs-- : secs;
         $("#seconds").attr("data-seconds", secs);
         secs < 10 ? $("#seconds").html("0"+secs) : $("#seconds").html(secs);
-        $("minutes").html(mins);
+        $("#minutes").html(mins);
 
         //If there are minutes left but no seconds left, subtract minutes and reset seconds.
         if (secs === 0 && mins > 0) {

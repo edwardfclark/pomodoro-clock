@@ -1,3 +1,20 @@
+/* Variable declarations. */
+
+:root {
+    --background-default: #556270;
+    --text-color: #fcfbe3;
+    --background-session: #368b34;
+    --background-break: #fab829;
+}
+
+/* Styles. */
+
+body {
+    background: var(--background-default);
+    color: var(--text-color);
+    transition: background 2s;
+}
+
 #container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -19,6 +36,7 @@
 h1 {
     font-size: 40px;
     margin: 0;
+    cursor: pointer;
 }
 
 #break-buttons, #session-buttons {
@@ -32,21 +50,25 @@ h1 {
 }
 
 .break {
-
+    background-color: var(--background-break);
 }
 
 .session {
-
+    background-color: var(--background-session);
 }
 
 .pause-text {
-
+    animation: blinker 1.5s linear infinite;
 }
 
 .hide {
-
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .5s, opacity .5s linear;
 }
 
 .show {
-    
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s linear;
 }
