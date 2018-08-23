@@ -4,7 +4,7 @@
     "description": "A Chrome extension that adds a Pomodoro Clock to the toolbar, for enhanced productivity!",
     "manifest_version": 2,
     "background": {
-        "scripts": ["background.js"],
+        "scripts": ["jquery-3.3.1.min.js", "background.js"],
         "persistent": false
     },
     "browser_action": {
