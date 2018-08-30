@@ -1,19 +1,20 @@
 $(document).ready(function () {
     
     const backgroundPage = chrome.extension.getBackgroundPage();
-    let testVar = backgroundPage.bgTestVar;
-    let renderTimer = setInterval(function() {
-        
-        console.log(backgroundPage.getter());
-    }, 1000);
-    //Start and stop the timer when #timer is clicked.
-    $("#timer").click(backgroundPage.timerTest);
     
-    //The timerChange() function is called whenever the user wants to alter the length of the break or the session.
-
+    //This timer will begin every time the popup loads, and the callback will run every second.
+    let popupTimer = setInterval(backgroundChecker, 100);
     
+    //This is the callback function for popupTimer.
+    //It will call getEndTimer() and update the pomodoro.html page accordingly.
+    //It will call getBreakLength() and getSessionLength() and update the pomodoro.html page, too.
+    //This is the function that updates the DOM elements.
+    function backgroundChecker() {
+        $("#timer > h1").html(backgroundPage.getEndTimer());
+        $("#break-length").html(backgroundPage.getBreakLength());
+        $("#session-length").html(backgroundPage.getSessionLength());
+    }
 
-
-    
+    $("#timer").click(() => backgroundPage.timerClick());
 
 });
