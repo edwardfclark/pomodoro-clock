@@ -9,16 +9,19 @@
     </head>
     <body>
         <div id="container">
-            <div id="interval-state" data-state="session"><h2 id="state-text">Session</h2></div>
-            <div id="timer" data-status="pause"><h1></h1></div>
-            <div id="session-buttons">
-                <p>Session</p>
-                <p><span id="session-subtract">-</span> <span id="session-length" data-time="25"></span> <span id="session-add">+</span></p>
-            </div>
-            <div id="break-buttons">
+            <div id="clock">
+                <div id="interval-state"><h1 id="state-text">Session</h1></div>
+                <div id="timer"><h1></h1></div>
+                <div id="session-buttons">
+                    <p>Session</p>
+                    <p><span id="session-subtract">-</span> <span id="session-length"></span> <span id="session-add">+</span></p>
+                </div>
+                <div id="break-buttons">
                     <p>Break</p>
-                    <p><span id="break-subtract">-</span> <span id="break-length" data-time="5"></span> <span id="break-add">+</span></p>
+                    <p><span id="break-subtract">-</span> <span id="break-length"></span> <span id="break-add">+</span></p>
+                </div>
             </div>
+            <img id="logo" src="logo.png">
         </div>
     </body>
 </html>
