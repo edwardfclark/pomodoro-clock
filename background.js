@@ -65,6 +65,7 @@ function countdown() {
         swapPomodoroState(pomodoroState);
         pomodoroState === "break" ? mins = breakLength : mins = sessionLength;
         chime.play();
+        return;
     }
     //Decrement secs unless secs is already 0. In that case, set secs to 59 and decrement mins.
     secs === 0 ? (secs = 59, mins--) : secs--;

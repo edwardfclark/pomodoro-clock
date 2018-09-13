@@ -1,9 +1,12 @@
-/* Variable declarations. */
+/* Variable declarations & Font Import. */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
 :root {
     --background-default: #fff;
-    --text-color: black;
+    --text-color: #3a3a3a;
     --border: #4ba045;
+    --roboto: "Roboto", sans-serif;
 }
 
 /* Styles. */
@@ -11,6 +14,7 @@
 body {
     background: var(--border);
     color: var(--text-color);
+    font-family: var(--roboto);
 }
 
 #container {
@@ -18,9 +22,14 @@ body {
     display: grid;
     grid-template-columns: 322px 78px;
     border: solid 1px var(--border);
+    border-radius: 10px;
     background: var(--background-default);
     width: 400px;
     height: auto;
+}
+
+img {
+    align-self: center;
 }
 
 #clock {
@@ -48,13 +57,31 @@ h1 {
     font-size: 15px;
     font-weight: bold;
     user-select: none;
+    font-weight: 300;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 40px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    
 }
 
 #break-buttons p, #session-buttons p {
-    margin: 0;
+    margin: 3px 0;
 }
 
 
 #break-subtract, #break-add, #session-subtract, #session-add {
     cursor: pointer;
+}
+
+#break-subtract, #session-subtract {
+    border-right: 1px solid var(--border);
+}
+
+#break-add, #session-add {
+    border-left: 1px solid var(--border);
 }
