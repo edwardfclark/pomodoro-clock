@@ -28,14 +28,12 @@ function incBreakLength() {
     if (breakLength < 60) {
         pomodoroState === "break" ? (breakLength++, mins++) : breakLength++;
     }
-    
 }
 
 function decBreakLength() {
     if (breakLength > 1) {
         pomodoroState === "break" ? (breakLength--, mins--) : breakLength--;
     }
-    
 }
 
 //incSessionLength() and decSessionLength() are called to increment and decrement the sessionLength variable.
@@ -43,7 +41,6 @@ function incSessionLength() {
     if (sessionLength < 60) {
         pomodoroState === "session" ? (sessionLength++, mins++) : sessionLength++;
     }
-    
 }
 
 function decSessionLength() {
@@ -55,6 +52,15 @@ function decSessionLength() {
 //This function swaps the state between "session" and "break". It will only be called when countdown() is running.
 function swapPomodoroState(currentState) {
     currentState === "session" ? pomodoroState = "break" : pomodoroState = "session";
+    
+    chrome.notifications.create({
+        "type": "basic",
+        "iconUrl": chrome.extension.getURL("logo_square.png"),
+        "title": pomodoroState.slice(0,1).toUpperCase() + pomodoroState.slice(1) + "!",
+        "message": "It's time to start your " + pomodoroState + "!",
+        "silent": true
+    }); 
+    
 }
 
 //This is the callback function for use in timerClick;
@@ -73,6 +79,9 @@ function countdown() {
 
 //If the timer is running, stop the timer. If the timer is not running, start the timer.
 function timerClick() {
+
+                          
+
     if (timer === null) {
         timer = setInterval(countdown, 1000);
     } else {
