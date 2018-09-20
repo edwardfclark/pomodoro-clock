@@ -51,15 +51,7 @@ function decSessionLength() {
 
 //This function swaps the state between "session" and "break". It will only be called when countdown() is running.
 function swapPomodoroState(currentState) {
-    currentState === "session" ? pomodoroState = "break" : pomodoroState = "session";
-    
-    chrome.notifications.create({
-        "type": "basic",
-        "iconUrl": chrome.extension.getURL("logo_square.png"),
-        "title": pomodoroState.slice(0,1).toUpperCase() + pomodoroState.slice(1) + "!",
-        "message": "It's time to start your " + pomodoroState + "!",
-        "silent": true
-    }); 
+    currentState === "session" ? pomodoroState = "break" : pomodoroState = "session"
     
 }
 
