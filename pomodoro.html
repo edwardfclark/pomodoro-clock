@@ -5,6 +5,7 @@
             <link rel="stylesheet" href="styles.css">
             <script src="timer-script.js"></script>
             <script src="background.js"></script>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
             
     </head>
     <body>
@@ -12,6 +13,7 @@
             <div id="clock">
                 <div id="interval-state"><h1 id="state-text">Session</h1></div>
                 <div id="timer"><h1></h1></div>
+                
                 <div id="session-buttons">
                     <p class="timer-label">Session</p>
                     <div class="buttons"><div id="session-subtract">-</div> <div id="session-length"></div> <div id="session-add">+</div></div>
@@ -19,6 +21,11 @@
                 <div id="break-buttons">
                     <p class="timer-label">Break</p>
                     <div class="buttons"><div id="break-subtract">-</div> <div id="break-length"></div> <div id="break-add">+</div></div>
+                </div>
+                <div id="controls">
+                    <p id="controls-label">Controls</p>
+                    <h2 id="start-stop"><i class="fas fa-play"></i><i class="fas fa-pause"></i></h2>
+                    <h2 id="reset"><i class="fas fa-sync-alt"></i></h2>
                 </div>
             </div>
             <img id="logo" src="logo_square.png">

@@ -16,10 +16,11 @@ $(document).ready(function () {
         $("#state-text").html(backgroundPage.getPomodoroState().slice(0,1).toUpperCase()+backgroundPage.getPomodoroState().slice(1)+":");
     }
 
-    $("#timer").click(() => backgroundPage.timerClick());
+    $("#start-stop").click(() => backgroundPage.timerClick());
     $("#break-subtract").click(() => backgroundPage.decBreakLength());
     $("#break-add").click(() => backgroundPage.incBreakLength());
     $("#session-subtract").click(() => backgroundPage.decSessionLength());
     $("#session-add").click(() => backgroundPage.incSessionLength());
+    $("#reset").click(() => backgroundPage.reset());
 
 });

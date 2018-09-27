@@ -81,3 +81,17 @@ function timerClick() {
         timer = null;
     }
 }
+
+function reset() {
+    if (timer !== null) {
+        clearInterval(timer);
+        timer = null;
+    }
+
+    mins = 25;
+    secs = 0;
+    breakLength = 5;
+    sessionLength = 25;
+    pomodoroState = "session";
+
+}
